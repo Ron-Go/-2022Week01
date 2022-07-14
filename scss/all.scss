@@ -70,7 +70,7 @@ header{
   .title{
     padding-bottom: 8px;
     border-bottom: 1px solid $color-border-base;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
   }
   .title span{
     vertical-align: 5px;
@@ -88,12 +88,12 @@ header{
   width: 996px;
   .title{
     border-bottom: 1px solid $color-border-white;
+    margin-bottom: 39px;
   }
   .list{
     width: 225px;
     padding-left: 24px;
     border-left: 1px solid $color-border-light;
-    margin-top: 40px;
     .item + .item{
       margin-top: $spacer / 2;
     }
@@ -101,7 +101,7 @@ header{
 }
 
 .experience{
-  margin-bottom: $spacer * 5;
+  margin-bottom: 79px;
   .list{
     padding-left: 24px;
     border-left: 1px solid $color-border-light;
