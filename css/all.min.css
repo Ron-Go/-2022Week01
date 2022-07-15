@@ -106,7 +106,7 @@ img {
 }
 
 .experience__list__item__content {
-  width: 642px;
+  max-width: 642px;
   font-size: 20px;
 }
 

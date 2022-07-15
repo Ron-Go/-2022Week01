@@ -118,7 +118,7 @@ img{
     margin-left: 24px;
     &__item{
       &__content{
-        width: 642px;
+        max-width: 642px;
         font-size: 20px;
       }
     }
