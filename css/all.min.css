@@ -30,112 +30,127 @@ img {
   display: block;
 }
 
-.container {
-  width: 1200px;
-}
-
-header {
+.header {
   padding-top: 40px;
 }
 
-header .name {
-  font-family: "SF Pro Text";
+.header__title {
   padding-bottom: 24px;
   border-bottom: 2px solid #000000;
   margin-bottom: 46px;
 }
 
-header img {
-  margin-bottom: 3rem;
+.header__img {
+  margin-bottom: 48px;
 }
 
-.profile .title, .education .title, .skills .title, .experience .title, .footer .title {
-  padding-bottom: 8px;
+.profile, .education, .experience, .skills, .footer {
+  padding-bottom: 64px;
+}
+
+.profile__title, .education__title, .experience__title, .skills__title, .footer__title {
+  padding-bottom: 7px;
   border-bottom: 1px solid #000000;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
-.profile .title span, .education .title span, .skills .title span, .experience .title span, .footer .title span {
+.profile__title__span, .education__title__span, .experience__title__span, .skills__title__span, .footer__title__span {
   vertical-align: 5px;
   margin-left: 1rem;
 }
 
-.container-lg {
-  padding-top: 30px;
+.profile__list__item + .profile__list__item, .education__list__item + .profile__list__item, .experience__list__item + .profile__list__item, .skills__list__item + .profile__list__item, .footer__list__item + .profile__list__item, .profile__list__item + .education__list__item, .education__list__item + .education__list__item, .experience__list__item + .education__list__item, .skills__list__item + .education__list__item, .footer__list__item + .education__list__item, .profile__list__item + .experience__list__item, .education__list__item + .experience__list__item, .experience__list__item + .experience__list__item, .skills__list__item + .experience__list__item, .footer__list__item + .experience__list__item, .profile__list__item + .skills__list__item, .education__list__item + .skills__list__item, .experience__list__item + .skills__list__item, .skills__list__item + .skills__list__item, .footer__list__item + .skills__list__item, .profile__list__item + .footer__list__item, .education__list__item + .footer__list__item, .experience__list__item + .footer__list__item, .skills__list__item + .footer__list__item, .footer__list__item + .footer__list__item {
+  margin-top: 24px;
+}
+
+.education__list__item + .education__list__item {
+  margin-top: 16px;
+}
+
+.skills, .footer {
+  padding-top: 24px;
   padding-bottom: 40px;
-  margin-bottom: 4.375rem;
 }
 
-.skills {
-  width: 996px;
-}
-
-.skills .title {
+.skills__title, .footer__title {
+  margin-bottom: 40px;
   border-bottom: 1px solid #ffffff;
-  margin-bottom: 39px;
 }
 
-.skills .list {
+.skills__list, .footer__list {
   width: 225px;
   padding-left: 24px;
-  border-left: 1px solid #96A9C4;
+  border-left: 1px solid #ffffff;
 }
 
-.skills .list .item + .item {
-  margin-top: 0.5rem;
+.skills__list:last-child, .footer__list:last-child {
+  font-family: "蘋方-繁";
+}
+
+.skills__list__item, .footer__list__item {
+  font-family: "SF Pro Text";
+}
+
+.skills__list__item + .skills__list__item, .footer__list__item + .skills__list__item, .skills__list__item + .footer__list__item, .footer__list__item + .footer__list__item {
+  margin-top: 8px;
 }
 
 .experience {
-  margin-bottom: 79px;
+  padding-bottom: 80px;
 }
 
-.experience .list {
+.experience__list {
   padding-left: 24px;
   border-left: 1px solid #96A9C4;
   margin-left: 24px;
 }
 
-.experience .item .content {
+.experience__list__item__content {
   width: 642px;
-}
-
-.experience .item + .item {
-  margin-top: 24px;
-}
-
-.experience .content {
   font-size: 20px;
 }
 
-.footer {
-  padding-top: 30px;
-  padding-bottom: 40px;
+.experience__list__item + .experience__list__item {
+  margin-top: 24px;
 }
 
-.footer .title {
+.footer__title {
   border-bottom: 1px solid #ffffff;
+  margin-bottom: 24px;
 }
 
-.footer .item a:hover {
+.footer__list {
+  width: 100%;
+  border-left: 0px;
+}
+
+.footer__list__item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer__list__item a:hover {
   text-decoration: underline;
 }
 
-.footer .item + .item {
-  margin-top: 1rem;
+.footer__list__item a + a {
+  margin-left: 24px;
 }
 
-.footer .icon-link {
-  display: inline-block;
-  transition: all 0.3s;
+.footer__list__item + .footer__list__item {
+  margin-top: 16px;
 }
 
-.footer .icon-link + .icon-link {
-  margin-left: 1.5rem;
+.container-lg {
+  width: 1920px;
 }
 
-.footer .icon-link:hover {
-  border-radius: 50%;
-  background-color: #000000;
+.container-md {
+  width: 1200px;
+}
+
+.container-sm {
+  width: 996px;
 }
 
 .d-inline-block {
@@ -156,6 +171,14 @@ header img {
 
 .decoration-none {
   text-decoration: none;
+}
+
+.bg-primary {
+  background-color: #415165;
+}
+
+.text-white {
+  color: #ffffff;
 }
 
 .fs-0 {
@@ -260,13 +283,5 @@ header img {
 
 .mb-6 {
   margin-bottom: 4rem;
-}
-
-.bg-blue {
-  background-color: #415165;
-}
-
-.text-white {
-  color: #ffffff;
 }
 /*# sourceMappingURL=all.min.css.map */

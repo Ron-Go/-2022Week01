@@ -21,12 +21,10 @@ body{
   color: $color-font-base;
   font-family: $font-family-TC;
 }
-
 h1{
   font-size: $font-size-base * 5;
   line-height: 95px;
 }
-
 h2{
   font-size: $font-size-base * 2;
   font-weight: 500;
@@ -47,110 +45,127 @@ img{
   display: block;
 }
 
-
 // main
-.container{
-  width: 1200px;
-}
+// ------index------
 
-header{
+.header{
   padding-top: 40px;
-  .name{
-    font-family: $font-family-SF;
+  &__title{
     padding-bottom: 24px;
     border-bottom: 2px solid $color-border-base;
     margin-bottom: 46px;
   }
-  img{
-    margin-bottom: 3rem;
+  &__img{
+    margin-bottom: 48px;
   }
+  
 }
 
-.profile, .education, .skills, .experience, .footer{
-  .title{
-    padding-bottom: 8px;
+.profile, .education, .experience, .skills, .footer{
+  padding-bottom: 64px;
+  &__title{
+    padding-bottom: 7px;
     border-bottom: 1px solid $color-border-base;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    &__span{
+      vertical-align: 5px;
+      margin-left: $spacer;
+    }
   }
-  .title span{
-    vertical-align: 5px;
-    margin-left: 1rem;
+  &__list{
+    &__item + &__item{
+      margin-top: 24px;
+    }
   }
 }
 
-.container-lg{
-  padding-top: 30px;
+.education{
+  &__list{
+    &__item + &__item{
+      margin-top: 16px;
+    }
+  }
+}
+
+.skills, .footer{
+  padding-top: 24px;
   padding-bottom: 40px;
-  margin-bottom: $spacer * 4.375;
-}
-
-.skills{
-  width: 996px;
-  .title{
+  &__title{
+    margin-bottom: 40px;
     border-bottom: 1px solid $color-border-white;
-    margin-bottom: 39px;
   }
-  .list{
+  &__list{
     width: 225px;
     padding-left: 24px;
-    border-left: 1px solid $color-border-light;
-    .item + .item{
-      margin-top: $spacer / 2;
+    border-left: 1px solid $color-border-white;
+    &:last-child{
+      font-family: $font-family-TC;
+    }
+    &__item{
+      font-family: $font-family-SF;
+    }
+    &__item + &__item{
+      margin-top: 8px;
     }
   }
 }
 
 .experience{
-  margin-bottom: 79px;
-  .list{
+  padding-bottom: 80px;
+  &__list{
     padding-left: 24px;
     border-left: 1px solid $color-border-light;
     margin-left: 24px;
-  }
-  .item{
-    .content{
-      width: 642px;
+    &__item{
+      &__content{
+        width: 642px;
+        font-size: 20px;
+      }
     }
-  }
-  .item + .item{
-    margin-top: 24px;
-  }
-  .content{
-    font-size: 20px;
+    &__item + &__item{
+      margin-top: 24px;
+    }
   }
 }
 
 .footer{
-  padding-top: 30px;
-  padding-bottom: 40px;
-  .title{
+  &__title{
     border-bottom: 1px solid $color-border-white;
+    margin-bottom: 24px;
   }
-  .item{
-    a{
-      &:hover{
-        text-decoration: underline;
+  &__list{
+    width: 100%;
+    border-left: 0px;
+    &__item{
+      a{
+        text-decoration: none;
+        color: $color-font-white;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      a + a{
+        margin-left: 24px;
       }
     }
-  }
-  .item + .item{
-    margin-top: $spacer;
-  }
-  .icon-link{
-    display: inline-block;
-    transition: all 0.3s;
-    & + .icon-link{
-      margin-left: $spacer * 1.5;
-    }
-    &:hover{
-      border-radius: 50%;
-      background-color: #000000;
+    &__item + &__item{
+      margin-top: 16px;
     }
   }
 }
 
 
-// module
+// utils
+.container-lg{
+  width: 1920px;
+}
+.container-md{
+  width: 1200px;
+}
+.container-sm{
+  width: 996px;
+}
+
 .d-inline-block{
   display: inline-block;
 }
@@ -166,8 +181,17 @@ header{
 .text-center{
   text-align: center;
 }
+
 .decoration-none{
   text-decoration: none;
+}
+
+.bg-primary{
+  background-color: $color-bgc-blue;
+}
+
+.text-white{
+  color: $color-font-white;
 }
 
 .fs-0{
@@ -252,12 +276,4 @@ header{
 }
 .mb-6{
   margin-bottom: $spacer * 4;
-}
-
-.bg-blue{
-  background-color: $color-bgc-blue;
-}
-
-.text-white{
-  color: $color-font-white;
 }
